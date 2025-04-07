@@ -1,0 +1,232 @@
+
+
+
+/* The CSS Flexbox Layout should be used for one-dimensional layout, with rows OR columns. */
+/* The CSS Grid Layout should be used for two-dimensional layout, with rows AND columns. */
+:root{
+    --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Typography - Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* Typography - Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, Arial, san-serif;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right,#550c18, #33243B, #122C48);
+    padding: 10% 5%;
+    flex-direction: column;
+
+}
+
+header a{
+    font-size: var(--font-size-4xl);
+    color: #fff;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-relaxed);
+    text-decoration: none;
+
+}
+
+header p{
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-loose);
+    margin-top: 2%;
+    color: #fff;
+}
+
+
+.photo_grid{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+
+.column{
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+
+.column img{
+    width: 100%;
+    vertical align: middle;
+    margin-top: 5px;
+}
+
+/* 
+--------------------GRID --------------------- */
+
+.svs{
+    padding: 0 20px;
+
+}
+
+
+.svs h1{
+    font-size: var(--font-size-4xl);
+}
+
+
+
+.services-list {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    display: flex;
+    flex-flow: column nowrap;
+    background: linear-gradient(135deg, #550C18, #122C48);
+    padding: 35px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    gap: 30px;
+}
+
+
+.services-list div h2{
+    font-size: var(--font-size-3xl);
+
+}
+
+.services-list div p{
+    font-size: var(--font-size-lg);
+}
+
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    background-color: #33243B;
+    padding: 10px;
+  }
+
+
+  .grid-container > div {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+  }
+  
+
+  .item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: linear-gradient(to right,#550c18, #33243B, #122C48);
+  }
+
+
+  .item1 h1{
+    font-size: var(--font-size-4xl);
+    color: #fff;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-relaxed);
+  }
+
+
+  .item1 p{
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-loose);
+    margin-top: 2%;
+    color: #fff;
+
+  } */
+
+  
+
+
+/* ---------------- MOBILE RESPONSIVITY------------------------------ */
+
+
+@media (max-width: 767px) {
+    .column{
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 4px;
+    }
+
+    header a{
+        font-size: var(--font-size-2xl);
+        color: #fff;
+        font-weight: var(--font-weight-bold);
+        line-height: var(--line-height-relaxed);
+        text-decoration: none;
+    
+    }
+
+    header p{
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-loose);
+        margin-top: 2%;
+        color: #fff;
+    }
+  }
+
+
+
+
+
+/* ----------------TABLET RESPONSIVITY------------------------- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .column{
+        flex: 50%;
+        max-width: 50%;
+        padding: 0 4px;
+    }
+
+    header a{
+        font-size: var(--font-size-3xl);
+        color: #fff;
+        font-weight: var(--font-weight-bold);
+        line-height: var(--line-height-relaxed);
+        text-decoration: none;
+    
+    }
+
+    header p{
+        font-size: var(--font-size-xl);
+        line-height: var(--line-height-loose);
+        margin-top: 2%;
+        color: #fff;
+    }
+    
+
+    
+  }
